@@ -9,8 +9,18 @@
   <script>
   function clearTable()
   {
-      var table = document.getElementById("number");
+    var table = document.getElementById("contentOfTable");
+    var clearButton = document.getElementById("clearButton");
+    if (table.style.display == "none")
+    {
+      clearButton.innerHTML = "Clear";
+      table.style.display = "block";
+    }
+    else
+    {
+      clearButton.innerHTML = "Reveal";
       table.style.display="none";
+    }
   }
   function initializeTable()
   {
@@ -49,7 +59,7 @@
   <div id="tableHolder">
   </div>
 
-    <button onclick="clearTable()">Clear</button>
+    <button id="clearButton" onclick="clearTable()">Clear</button>
 </body>
 
 </html>
