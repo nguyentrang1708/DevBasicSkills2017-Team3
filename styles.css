@@ -1,0 +1,51 @@
+#navigation {
+  margin: auto;
+  width: 70%;
+}
+
+#image-wizard {
+  margin: auto;
+  width: 50%;
+}
+
+ul {
+    /*position: relative;*/
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    /*background-color: #333;*/
+}
+
+li {
+    float: left;
+    width: 300px;
+    height: 250px;
+    background-image: url("back.jpg");
+    background-position: center top;
+}
+
+li a {
+    font-family: 'Indie Flower', cursive;
+    font-size: 28pt;
+    text-transform: uppercase;
+    display: block;
+    color: rgb(204, 102, 0);
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    text-decoration: none;
+    transition: background-color 2s, transform .2s ease-in-out;;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: rgb(255, 0, 102);
+    background-color: rgb(255, 255, 204);
+    transform: scaleX(1.5);
+    transform: scaleY(1.5);
+}
+
+body {
+    background-image: url("math.jpg");
+
+}

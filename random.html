@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random</title>
+  </head>
+<script>
+function random(min,max)
+{
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+var less10 = 0, less20 = 0, less30 = 0, less40 = 0, less50 = 0;
+
+function createRandom()
+{
+    var randomNum = random(1,50);
+
+document.getElementById("random-result").innerHTML = randomNum;
+
+    if(randomNum < 11)
+    {
+        less10 ++;
+    document.getElementById("<10").innerHTML = less10;
+    }
+
+    else if(randomNum < 21 && randomNum > 10)
+    {
+        less20 ++;
+  document.getElementById("<20").innerHTML = less20;
+    }
+
+    else if(randomNum < 31 && randomNum > 20)
+    {
+        less30 ++;
+  document.getElementById("<30").innerHTML = less30;
+    }
+
+    else if(randomNum < 41 && randomNum > 30)
+    {
+        less40 ++;
+  document.getElementById("<40").innerHTML = less40;
+    }
+
+    else if(randomNum < 51 && randomNum > 40)
+    {
+        less50 ++;
+  document.getElementById("<50").innerHTML = less50;
+    }
+
+}
+</script>
+<body>
+<h2>Test random number</h2>
+
+<table id="random">
+    <h3>Number distribution</h3>
+
+    <tr>
+        <th>1-10</th>
+        <th>11-20</th>
+        <th>21-30</th>
+        <th>31-40</th>
+        <th>41-50</th>
+    </tr>
+
+    <tr>
+        <td id="<10">0</td>
+        <td id="<20">0</td>
+        <td id="<30">0</td>
+        <td id="<40">0</td>
+        <td id="<50">0</td>
+    </tr>
+</table>
+
+<br>
+
+<button onclick="createRandom()">Create random number</button>
+<h3 id="random-result"></h3>
+
+</body>
+</html>

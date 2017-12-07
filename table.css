@@ -1,0 +1,58 @@
+body {
+    background-image: url("math1.jpg");
+    color: white;
+}
+#tableHolder{
+  margin: auto;
+  width:30%;
+}
+
+thead tr
+{
+  background-color: rgb(255, 102, 0);
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 1px;
+
+}
+thead th{
+  font-family: 'Indie Flower';
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+table {
+    font-family: 'Indie Flower';
+    border-collapse: collapse;
+    border-bottom: 1px solid #dddddd;
+    width: 50%;
+}
+
+td {
+    border-right: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr{
+  background-color: rgb(247, 247, 247);
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 510px;
+}

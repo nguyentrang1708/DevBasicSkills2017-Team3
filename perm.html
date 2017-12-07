@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <script>
+  function clearTable()
+  {
+      var table = document.getElementById("number");
+      table.style.display="none";
+  }
+
+  function factorial(num)
+  {
+      if (num === 0)
+        { return 1; }
+      else
+        { return num * factorial ( num - 1); }
+  }
+
+  function permuWith(n,r)
+  {
+      return Math.pow(n,r);
+  }
+
+  function permuWithout(n,r)
+  {
+      return ( factorial(n) / factorial(n-r));
+  }
+
+  function combiWith(n,r)
+  {
+      return ( factorial(n+r-1) / (factorial(r) * factorial(n-1)) );
+  }
+
+  function combiWithout(n,r)
+  {
+      return ( factorial(n) / (factorial(r) * factorial(n-r)) );
+  }
+
+  function calculate()
+  {
+      var selectInput = document.getElementById("type");
+
+  var n = Number(document.getElementById("n").value);
+
+  var r = Number(document.getElementById("r").value);
+
+  var result = "";
+
+      if(selectInput.options[selectInput.selectedIndex].value == "permutation")
+      {
+          if(document.getElementById("replacementInput").checked)
+          {
+              result = permuWith(n,r);
+          }
+          else
+          {
+              result= permuWithout(n,r);
+          }
+
+      }
+
+      else
+      {
+          if(document.getElementById("replacementInput").checked)
+          {
+              result = combiWith(n,r);
+          }
+          else
+          {
+              result= combiWithout(n,r);
+          }
+      }
+
+      document.getElementById("result").innerHTML = result;
+  }
+  </script>
+  <body>
+  <h2>Combinatorics Calculator</h2>
+
+    <select name="type" id="type">
+        <option value="permutation">Permutation</option>
+        <option value="combination">Combination</option>
+    </select>
+
+    <br>
+
+    Type n (objects) here
+    <input type="text" name="n" id="n">
+    Type r (objects) here
+    <input type="text" name="r" id="r">
+
+    <br>
+
+    <input type="radio" name="replacement" value="with-replacement" checked id="replacementInput"> With Replacement
+    <br>
+    <input type="radio" name="replacement" value="without-replacement" id="replacementInput"> Without Replacement
+    </br>
+
+    <button onclick="calculate();">Calculate</button>
+
+<h2 id="result"></h2>
+  </body>
+</html>

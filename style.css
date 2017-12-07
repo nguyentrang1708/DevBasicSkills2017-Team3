@@ -1,0 +1,45 @@
+.sign-up-button
+{
+  background-color: #01c99a;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px rgba(20,20,20, 0.8);
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 0px;
+}
+.sign-up-button:hover{
+  background-color: red;
+}
+.sign-up-button:focus{
+  background-color: red;
+}
+ td:last-child
+ {
+   border: 0px;
+ }
+ thead tr
+ {
+   background-color: #01c99a;
+   color: white;
+   text-align: center;
+   font-size: 18px;
+   font-weight: 100;
+   letter-spacing: 1px;
+
+ }
+ thead th{
+   font-family: 'Nunito', sans-serif;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   padding-top: 7px;
+   padding-bottom: 7px;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
