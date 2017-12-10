@@ -1,10 +1,26 @@
 body {
     background-image: url("math1.jpg");
-    color: white;
+    color: rgb(0, 0, 102);
+}
+h1{
+  text-shadow: 2px 1px white;
+  text-decoration: overline;
+  color: rgb(51, 51, 204);
+  margin-left: 560px;
+}
+#Wiz{
+  position: absolute;
+  margin-left: 10px;
 }
 #tableHolder{
-  margin: auto;
+  position: relative;
+  margin-left: 495px;
   width:30%;
+}
+#Svitok{
+  position: absolute;
+  margin-left: 950px;
+  top: auto;
 }
 
 thead tr
@@ -45,14 +61,26 @@ tr:nth-child(even) {
 tr{
   background-color: rgb(247, 247, 247);
 }
-.header img {
-  float: left;
-  width: 100px;
-  height: 100px;
-}
 
-.header h1 {
-  position: relative;
-  top: 18px;
-  left: 510px;
+#clearButton{
+  position: absolute;
+  background-color: rgb(0, 0, 102);
+      border: none;
+      color: white;
+      padding: 20px 15px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 25px;
+      margin-left: 50px;
+      width: 80%;
+      top: 560px;
+}
+#clearButton:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#clearButton:active {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 5px #666;
 }

@@ -4,12 +4,11 @@
   <title>maths</title>
   <link rel="stylesheet" href="table.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-<a href="http://www.animatedimages.org/cat-magicians-711.htm"></a>
 
   <script>
   function clearTable()
   {
-    var table = document.getElementById("contentOfTable");
+    var table = document.getElementById("tableHolder");
     var clearButton = document.getElementById("clearButton");
     if (table.style.display == "none")
     {
@@ -48,18 +47,16 @@
 </head>
 
 <body onload="initializeTable()">
-  <div class="header">
-  <img src="http://www.animatedimages.org/data/media/711/animated-magician-image-0038.gif" border="0" alt="animated-magician-image-0038" style="width:70px;height:70px;">
   <h1>Number system outputs</h1>
-</div>
-
-  <p>Here is the table with numbers from 0-50 in four different numbering systems. You can copy it down, learn, or just look at amazing mathematical patterns. If you want - you can clear the table - just use your button magic!</p>
-
-
+  <div id="WizButton">
+    <img id="Wiz" src="Wiz.png" alt="wizz" style="width:350px">
+  </div>
+  <div id="Svitok">
+    <img src="TableS.png" alt="TableSvitok" style="width:450px">
+    <button id="clearButton" onclick="clearTable()">Clear</button>
+  </div>
   <div id="tableHolder">
   </div>
-
-    <button id="clearButton" onclick="clearTable()">Clear</button>
 </body>
 
 </html>
