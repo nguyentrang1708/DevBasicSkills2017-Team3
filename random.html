@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Random</title>
+    <title>Random distribution</title>
+    <link rel="stylesheet" href="random.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
 <script>
 function random(min,max)
@@ -50,8 +52,14 @@ document.getElementById("random-result").innerHTML = randomNum;
 }
 </script>
 <body>
-<h2>Test random number</h2>
-
+  <h1>Random Numbers Distribution</h1>
+  <div id="WizButton">
+    <img id="Wiz" src="Wiz.png" alt="wizz" style="width:350px">
+  </div>
+  <div id="Svitok">
+    <img src="Svitok2.png" alt="TableSvitok" style="width:450px">
+  </div>
+<div id="Tool">
 <table id="random">
     <h3>Number distribution</h3>
 
@@ -71,11 +79,10 @@ document.getElementById("random-result").innerHTML = randomNum;
         <td id="<50">0</td>
     </tr>
 </table>
-
 <br>
 
 <button onclick="createRandom()">Create random number</button>
 <h3 id="random-result"></h3>
-
+</div>
 </body>
 </html>

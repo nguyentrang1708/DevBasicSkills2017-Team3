@@ -4,6 +4,7 @@
   <title>maths</title>
   <link rel="stylesheet" href="table.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 
   <script>
   function clearTable()
@@ -14,11 +15,16 @@
     {
       clearButton.innerHTML = "Clear";
       table.style.display = "block";
+
     }
     else
     {
       clearButton.innerHTML = "Reveal";
       table.style.display="none";
+      TweenMax.to( table, 2,
+          {
+            opacity: 0,
+          })
     }
   }
   function initializeTable()

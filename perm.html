@@ -2,15 +2,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Document</title>
+    <title>Combinatorics</title>
+    <link rel="stylesheet" href="perm.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <script>
-  function clearTable()
-  {
-      var table = document.getElementById("number");
-      table.style.display="none";
-  }
-
   function factorial(num)
   {
       if (num === 0)
@@ -78,8 +74,15 @@
   }
   </script>
   <body>
-  <h2>Combinatorics Calculator</h2>
-
+  <h1>Combinatorics Calculator</h1>
+  <div id="WizButton">
+    <img id="Wiz" src="Wiz.png" alt="wizz" style="width:350px">
+  </div>
+  <div id="Svitok">
+    <img src="Svitok2.png" alt="TableSvitok" style="width:450px">
+  </div>
+ <div id="Tool">
+   <p> Find out how many different ways to choose items, where "N" is the number of items, and "P" is the number of objects you choose! </p>
     <select name="type" id="type">
         <option value="permutation">Permutation</option>
         <option value="combination">Combination</option>
@@ -89,6 +92,7 @@
 
     Type n (objects) here
     <input type="text" name="n" id="n">
+    <br>
     Type r (objects) here
     <input type="text" name="r" id="r">
 
@@ -102,5 +106,6 @@
     <button onclick="calculate();">Calculate</button>
 
 <h2 id="result"></h2>
+</div>
   </body>
 </html>
