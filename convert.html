@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combinatorics</title>
+    <link rel="stylesheet" href="perm.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+  <script>
+
+  function calculate()
+  {
+  var selectInput = document.getElementById("type1");
+  var resultInput = document.getElementById("type2");
+
+  var n = document.getElementById("n").value;
+
+  var baseNumber ;
+
+      if(selectInput.options[selectInput.selectedIndex].value == "binary")
+      {
+          baseNumber = 2;
+      }
+      else if (selectInput.options[selectInput.selectedIndex].value == "decimal")
+      {
+          baseNumber = 10;
+      }
+      else if (selectInput.options[selectInput.selectedIndex].value == "octal")
+      {
+          baseNumber = 8;
+      }
+      else if (selectInput.options[selectInput.selectedIndex].value == "hexadecimal")
+      {
+          baseNumber = 16;
+      }
+      else
+      {
+          //write error
+      }
+
+
+      var digitDecimal = parseInt(n, baseNumber);
+      var digitFinal;
+
+      if (resultInput.options[resultInput.selectedIndex].value == "binary")
+      {
+          digitFinal = digitDecimal.toString(2);
+      }
+      else if (resultInput.options[resultInput.selectedIndex].value == "octal")
+      {
+          digitFinal = digitDecimal.toString(8);
+      }
+      else if (resultInput.options[resultInput.selectedIndex].value == "hexadecimal")
+      {
+          digitFinal = digitDecimal.toString(16);
+      }
+      else
+      {
+        digitFinal = digitDecimal;
+      }
+
+      document.getElementById("result").innerHTML = digitFinal;
+  }
+  </script>
+  <body>
+    <h1>Numbering Systems Conversions</h1>
+    <div id="WizButton">
+      <img id="Wiz" src="Wiz.png" alt="wizz" style="width:350px">
+    </div>
+    <div id="Svitok">
+      <img src="Svitok2.png" alt="TableSvitok" style="width:450px">
+    </div>
+  <div id="Tool">
+    <br>
+    Type an original number here
+    <input type="text" name="n" id="n">
+    <br>
+    <br>
+    Convert from
+  <select name="type" id="type1">
+      <option value="binary">Binary</option>
+      <option value="decimal">Decimal</option>
+      <option value="octal">Octal</option>
+      <option value="hexadecimal">Hexadecimal</option>
+  </select>
+  <br>
+  <br>
+  Convert number to
+  <select name="type" id="type2">
+      <option value="binary">Binary</option>
+      <option value="decimal">Decimal</option>
+      <option value="octal">Octal</option>
+      <option value="hexadecimal">Hexadecimal</option>
+  </select>
+  <br>
+  <br>
+  <button onclick="calculate()">Calculate</button>
+
+<h2 id="result"></h2>
+</div>
+<!-- <div id="footer">
+<p>Developed by Zhanna Kresteva and Thu Trang, 2017. OAMK</p>
+</div> -->
+</body>
+</html>

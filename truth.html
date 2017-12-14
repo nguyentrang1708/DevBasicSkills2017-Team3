@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thruth</title>
+    <link rel="stylesheet" href="truth.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+  <script>
+  function initializeAndShowTable()
+  {
+    var selectInput = document.getElementById("type1");
+
+    var p = [true, true, false, false];
+    var q = [true, false, true, false];
+    var conj = [];
+      for (let i=0; i < p.length; i ++)
+      {
+        if (p[i] && q[i] == true)
+        {
+          conj[i] = true;
+        }
+        else {
+          conj[i] = false;
+        }
+      }
+    var disj = [];
+       for (let i=0; i< p.length; i ++)
+       {
+         if(p[i]||q[i] == true)
+         {
+           disj[i] = true;
+         }
+         else{
+           disj[i] = false;
+         }
+       }
+    var negatp = [];
+      for (let i=0; i< p.length; i ++)
+       {
+         if(p[i] == true){
+           negatp[i] = false;
+         }
+         else{
+           negatp[i]= true;
+         }
+       }
+    var negatq =[];
+    for (let i=0; i< p.length; i ++)
+    {
+          if(q[i] == true){
+          negatq[i] = false;
+        }
+         else{
+              negatq[i]= true;
+            }
+    }
+
+    if(selectInput.options[selectInput.selectedIndex].value == "conj")
+    {
+      var table = "<table id=\"contentOfTable\"><thead>" +
+      "<tr><th><i>p</i></th><th><i>q</i></th><th><i>p</i>&#8743;<i>q</i></th></tr></thead>";
+
+      for (let i=0; i<conj.length; i++)
+      {
+        table += "<tr><td>" + p[i] + "</td><td>" + q[i] + "</td><td>" + conj[i] + "</td></tr>"
+      }
+
+
+    }
+    else if(selectInput.options[selectInput.selectedIndex].value == "disj")
+    {
+      var table = "<table id=\"contentOfTable\"><thead>" +
+      "<tr><th><i>p</i></th><th><i>q</i></th><th><i>p</i>&#8744;<i>q</i></th></tr></thead>";
+
+      for (let i=0; i<conj.length; i++)
+      {
+        table += "<tr><td>" + p[i] + "</td><td>" + q[i] + "</td><td>" + disj[i] + "</td></tr>"
+      }
+    }
+    else if(selectInput.options[selectInput.selectedIndex].value == "neg")
+    {
+      var table = "<table id=\"contentOfTable\"><thead>" +
+      "<tr><th><i>p</i></th><th><i>q</i></th><th>&#172;<i>p</i></th><th>&#172;<i>q</i></th></tr></thead>";
+
+      for (let i=0; i<conj.length; i++)
+      {
+        table += "<tr><td>" + p[i] + "</td><td>" + negatp[i] + "</td><td>" + q[i] + "</td><td>" + negatq[i]+ "</td></tr>"
+      }
+    }
+    else
+    {
+
+    }
+
+    //p q AND OR
+
+    table += "</table>";
+
+    document.getElementById('tableHolder').innerHTML = table;
+}
+</script>
+<body>
+<h1>Truth tables</h1>
+<div id="WizButton">
+  <img id="Wiz" src="Wiz.png" alt="wizz" style="width:350px">
+</div>
+<div id="Svitok">
+  <img src="Svitok2.png" alt="TableSvitok" style="width:450px">
+</div>
+<div id="Tool">
+  <h3 id="main"> Please choose the logical operation </h3>
+  <select name="type" id="type1" onchange="initializeAndShowTable()">
+      <option value> Select an option </option>
+      <option value="conj">Conjunction</option>
+      <option value="disj">Disjunction</option>
+      <option value="neg">Negation</option>
+ </select>
+<div id="tableHolder">
+  </div>
+</div>
+<!-- <div id="footer">
+<p>Developed by Zhanna Kresteva and Thu Trang, 2017. OAMK</p>
+</div> -->
+</body>
+</html>

@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <script>
+
+
   function factorial(num)
   {
       if (num === 0)
@@ -35,9 +37,23 @@
       return ( factorial(n) / (factorial(r) * factorial(n-r)) );
   }
 
+  function dis()
+  {
+    var selectInput = document.getElementById("type");
+
+        if(selectInput.options[selectInput.selectedIndex].value == "permutation")
+       {
+         document.getElementById("radio").style.display = "block";
+       }
+       else {
+         document.getElementById("radio").style.display = "none";
+       }
+  }
   function calculate()
   {
-      var selectInput = document.getElementById("type");
+
+    var selectInput = document.getElementById("type");
+
 
   var n = Number(document.getElementById("n").value);
 
@@ -83,9 +99,9 @@
   </div>
  <div id="Tool">
    <p> Find out how many different ways to choose items, where "N" is the number of items, and "P" is the number of objects you choose! </p>
-    <select name="type" id="type">
-        <option value="permutation">Permutation</option>
+    <select name="type" id="type" onchange="dis()">
         <option value="combination">Combination</option>
+        <option value="permutation">Permutation</option>
     </select>
 
     <br>
@@ -97,15 +113,18 @@
     <input type="text" name="r" id="r">
 
     <br>
-
+<div id="radio" style="display:none">
     <input type="radio" name="replacement" value="with-replacement" checked id="replacementInput"> With Replacement
     <br>
     <input type="radio" name="replacement" value="without-replacement" id="replacementInput"> Without Replacement
     </br>
-
+</div>
     <button onclick="calculate();">Calculate</button>
 
 <h2 id="result"></h2>
 </div>
+<!-- <div id="footer">
+<p>Developed by Zhanna Kresteva and Thu Trang, 2017. OAMK</p>
+</div> -->
   </body>
 </html>
