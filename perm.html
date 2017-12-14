@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <script>
+
+
   function factorial(num)
   {
       if (num === 0)
@@ -34,9 +36,11 @@
   {
       return ( factorial(n) / (factorial(r) * factorial(n-r)) );
   }
-  var dis = document.getElementById("radio");
+
   function dis()
   {
+    var selectInput = document.getElementById("type");
+
         if(selectInput.options[selectInput.selectedIndex].value == "permutation")
        {
          document.getElementById("radio").style.display = "block";
@@ -47,7 +51,9 @@
   }
   function calculate()
   {
-      var selectInput = document.getElementById("type");
+
+    var selectInput = document.getElementById("type");
+
 
   var n = Number(document.getElementById("n").value);
 
